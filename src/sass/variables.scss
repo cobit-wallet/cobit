@@ -71,14 +71,14 @@ $v-bitcoin-icon:                                     url('../img/icon-bitcoin.sv
 $v-button-primary-bg:                                $v-accent-color !default;
 $v-button-primary-color:                             #ffffff !default;
 $v-button-primary-border:                            transparent !default;
-$v-button-primary-active-bg:                         darken($v-accent-color, 10%) !default;
+$v-button-primary-active-bg:                         darken($v-button-primary-bg, 10%) !default;
 $v-button-primary-active-border:                     transparent !default;
 $v-button-primary-clear-bg:                          none !default;
-$v-button-primary-clear-color:                       $v-accent-color !default;
+$v-button-primary-clear-color:                       $v-button-primary-bg !default;
 $v-button-primary-outline-bg:                        transparent !default;
-$v-button-primary-outline-border:                    $v-accent-color !default;
-$v-button-primary-outline-color:                     $v-accent-color !default;
-$v-button-primary-outline-active-bg:                 $v-accent-color !default;
+$v-button-primary-outline-border:                    $v-button-primary-bg !default;
+$v-button-primary-outline-color:                     $v-button-primary-bg !default;
+$v-button-primary-outline-active-bg:                 $v-button-primary-bg !default;
 $v-button-primary-outline-active-color:              #ffffff !default;
 
 $v-button-secondary-bg:                              $v-subtle-gray !default;
