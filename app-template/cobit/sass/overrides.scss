@@ -3,24 +3,36 @@
  */
 
 /* Colors */
-$v-primary-color:                                    #192c3a;
-$v-secondary-color:                                  #31465b;
+$v-primary-color:                                    #e95420;
+$v-secondary-color:                                  lighten($v-primary-color, 10%);
 $v-accent-color:                                     #1abb9b;
 
-$v-text-primary-color:                               #192c3a;
+$v-text-primary-color:                               darken($v-primary-color, 10%);
 $v-text-secondary-color:                             #c2c9d1;
 $v-text-accent-color:                                #1abb9b;
 
 $v-success-color:                                    #1abb9b;
-$v-warning-color:                                    #bb331a;
+$v-warning-color:                                    #EFB73E;
+
+$v-icon-color: $v-primary-color;
+$v-button-primary-bg: $v-primary-color;
+
+#onboarding-collect-email {
+  background-color: $v-primary-color !important;
+}
+
+#tab-home .icon-create-wallet {
+  background-color: #f38f12; // default wallet color
+}
+
 
 /* Theme */ 
-$v-default-wallet-color-index:                       6;
+$v-default-wallet-color-index:                       1;
 $v-top-tabs-color:                                   $v-accent-color;
 $v-wallet-backup-phrase-color:                       $v-text-primary-color;
 $v-wallet-backup-select-phrase-color:                $v-secondary-color;
 $v-wallet-backup-select-word-bg:                     $v-accent-color;
-$v-wallet-backup-select-word-color:                  $v-text-primary-color;
+$v-wallet-backup-select-word-color:                  $v-secondary-color;
 $v-wallet-backup-select-word-disabled-color:         $v-accent-color;
 $v-tou-bg:                                           $v-secondary-color;
 $v-tou-color:                                        $v-text-secondary-color;
