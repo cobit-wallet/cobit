@@ -159,6 +159,8 @@ angular.module('copayApp.services').factory('amazonService', function($http, $lo
   };
 
   var register = function() {
+    return; // Cobit: disable BitPay commercial services
+
     storageService.getAmazonGiftCards(root.getNetwork(), function(err, giftCards) {
       if (giftCards) {
         homeIntegrationsService.register(homeItem);

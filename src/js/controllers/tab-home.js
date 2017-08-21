@@ -115,7 +115,7 @@ angular.module('copayApp.controllers').controller('tabHomeController',
         $scope.recentTransactionsEnabled = config.recentTransactions.enabled;
         if ($scope.recentTransactionsEnabled) getNotifications();
 
-        if (config.hideNextSteps.enabled) {
+        if (1 || config.hideNextSteps.enabled) { // Cobit: disable BitPay commercial services
           $scope.nextStepsItems = null;
         } else {
           $scope.nextStepsItems = nextStepsService.get();

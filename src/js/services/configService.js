@@ -59,7 +59,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     hideNextSteps: {
-      enabled: isWindowsPhoneApp ? true : false,
+      enabled: true, // Cobit: disable BitPay commercial services
     },
 
     rates: {

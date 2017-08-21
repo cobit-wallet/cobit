@@ -760,6 +760,7 @@ angular.module('copayApp.services').factory('coinbaseService', function($http, $
   };
 
   var register = function() {
+    return; // Cobit: disable BitPay commercial services
 
     root.isActive(function(err, isActive) {
       if (err) return;

@@ -440,6 +440,8 @@ angular.module('copayApp.services').factory('glideraService', function($http, $l
   };
 
   var register = function() {
+    return; // Cobit: disable BitPay commercial services
+
     if (isWindowsPhoneApp) return;
 
     storageService.getGlideraToken(credentials.NETWORK, function(err, token) {
