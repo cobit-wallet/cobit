@@ -98,7 +98,7 @@ angular.module('copayApp.services')
             body = gettextCatalog.getString('The spend proposal is not pending');
             break;
           case 'UPGRADE_NEEDED':
-            body = gettextCatalog.getString('Please upgrade Copay to perform this action');
+            body = gettextCatalog.getString('Please upgrade Cobit to perform this action');
             break;
           case 'BAD_SIGNATURES':
             body = gettextCatalog.getString('Signatures rejected by server');

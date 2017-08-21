@@ -18,23 +18,15 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     download: {
-      bitpay: {
-        url: 'https://bitpay.com/wallet'
-      },
-      copay: {
-        url: 'https://copay.io/#download'
+      cobit: {
+        url: 'https://cobit.community/#download'
       }
     },
 
     rateApp: {
-      bitpay: {
-        ios: 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1149581638&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8',
-        android: 'https://play.google.com/store/apps/details?id=com.bitpay.wallet',
-        wp: ''
-      },
-      copay: {
-        ios: 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=951330296&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8',
-        android: 'https://play.google.com/store/apps/details?id=com.bitpay.copay',
+      cobit: {
+        ios: '', // no iOS yet
+        android: 'https://play.google.com/store/apps/details?id=com.cobit',
         wp: ''
       }
     },
@@ -75,7 +67,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     release: {
-      url: 'https://api.github.com/repos/bitpay/copay/releases/latest'
+      url: 'https://api.github.com/repos/cobit-wallet/cobit/releases/latest'
     },
 
     pushNotificationsEnabled: true,

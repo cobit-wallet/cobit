@@ -16,7 +16,7 @@ angular.module('copayApp.controllers').controller('importController',
       $scope.formData.derivationPath = derivationPathHelper.default;
       $scope.formData.account = 1;
       $scope.importErr = false;
-      $scope.isCopay = appConfigService.name == 'copay';
+      $scope.isCopay = appConfigService.name == 'cobit';
       $scope.fromHardwareWallet = { value: false };
 
       if ($stateParams.code)

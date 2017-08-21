@@ -26,8 +26,8 @@ angular.module('copayApp.services').factory('fingerprintService', function($log,
   var requestFinger = function(cb) {
     try {
       FingerprintAuth.show({
-          clientId: 'Copay',
-          clientSecret: 'hVu1NvCZOyUuGgr46bFL',
+          clientId: 'Cobit',
+          clientSecret: 'dKoiBmvF5TaZQwPvTa7',
         },
         function(result) {
           if (result.withFingerprint) {
