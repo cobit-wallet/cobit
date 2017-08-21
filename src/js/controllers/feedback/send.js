@@ -9,10 +9,7 @@ angular.module('copayApp.controllers').controller('sendController', function($sc
     var dataSrc = {
       "Email": lodash.values(config.emailFor)[0] || ' ',
       "Feedback": goHome ? ' ' : feedback,
-      "Score": $stateParams.score || ' ',
-      "AppVersion": $window.version,
-      "Platform": ionic.Platform.platform(),
-      "DeviceVersion": ionic.Platform.version()
+      "Score": $stateParams.score || ' '
     };
 
     if (!goHome) ongoingProcess.set('sendingFeedback', true);

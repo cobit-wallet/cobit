@@ -12,10 +12,7 @@ angular.module('copayApp.controllers').controller('rateAppController', function(
     var dataSrc = {
       "Email": lodash.values(config.emailFor)[0] || ' ',
       "Feedback": ' ',
-      "Score": $stateParams.score,
-      "AppVersion": $window.version,
-      "Platform": ionic.Platform.platform(),
-      "DeviceVersion": ionic.Platform.version()
+      "Score": $stateParams.score
     };
     feedbackService.send(dataSrc, function(err) {
       if (err) {
