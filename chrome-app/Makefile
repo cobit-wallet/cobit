@@ -23,5 +23,7 @@ files:
 $(ZIPFILE): dir files
 	cd $(BUILDDIR)
 	rm -f $(ZIPFILE)
-	zip -qr $(ZIPFILE) "`basename $(BUILDDIR)`"
+	# use grunt-contrib-compress, patched for reproducibility
+	../node_modules/.bin/grunt compress:chrome
+
 	@echo "** The Chrome Extension is ready at cobit-chrome-extension.zip"

@@ -62,6 +62,8 @@ Object.keys(templates).forEach(function(k) {
     k = 'config.xml';
   } else if (k === 'package-template.json') {
     k = 'package.json';
+    // canonical reproducible format for package.json (strip extra spaces, duplicate "//" field, etc)
+    content = JSON.stringify(JSON.parse(content), null, 2) + '\n'
   }
 
   if (!fs.existsSync('../' + targetDir)) {
