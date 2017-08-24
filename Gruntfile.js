@@ -1,5 +1,7 @@
 'use strict';
 
+require('./util/deterministic-zip')
+
 module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
@@ -249,6 +251,15 @@ module.exports = function(grunt) {
         cwd: './webkitbuilds/<%= pkg.title %>/linux64/',
         src: ['**/*'],
         dest: '<%= pkg.title %>-linux/'
+      },
+      chrome: {
+        options: {
+          archive: './chrome-app/<%= pkg.name %>-chrome-extension.zip'
+        },
+        expand: true,
+        cwd: './chrome-app/build',
+        src: ['**/*'],
+        dest: '<%= pkg.name %>-chrome-extension'
       }
     },
     browserify: {
@@ -257,6 +268,11 @@ module.exports = function(grunt) {
           'angular-bitcore-wallet-client/angular-bitcore-wallet-client.js': ['angular-bitcore-wallet-client/index.js'],
           'angular-bitauth/angular-bitauth.js': ['angular-bitauth/index.js']
         },
+        options: {
+          // remove all package.json fields except for name and version
+          // (some fields are environment dependant, include full system paths, etc)
+          transform: [ [ 'browserify-package-json', { global: true, only: [ 'name', 'version' ] }  ] ]
+        }
       }
     }
   });
