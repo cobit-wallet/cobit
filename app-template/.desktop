@@ -1,10 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=*VERSION*
-Name=*USERVISIBLENAME*
+Name=*PURPOSELINE*
 Comment=*PURPOSELINE*
-Exec=*PACKAGENAME*
-Icon=icon-256.png
+# Icon path must be absolute, update on first launch
+Exec=sh -c 'cd $(dirname %k) && sed -i "s,^Icon=@,Icon=$PWD,g" .desktop && ./Cobit'
+Icon=@/512x512.png
 Terminal=false
 Categories=Finance
 X-Ubuntu-Touch=true

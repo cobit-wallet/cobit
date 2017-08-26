@@ -249,7 +249,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: './webkitbuilds/<%= pkg.title %>/linux64/',
-        src: ['**/*'],
+        src: ['**/*', '.desktop'],
         dest: '<%= pkg.title %>-linux/'
       },
       chrome: {
