@@ -231,6 +231,7 @@ module.exports = function(grunt) {
         version: '0.19.5',
         macIcns: './resources/<%= pkg.name %>/mac/app.icns',
         exeIco: './www/img/app/logo.ico',
+        // winIco: './www/img/app/logo.ico', // requires wine
         macPlist: {
           'CFBundleURLTypes': [
             {
@@ -251,6 +252,15 @@ module.exports = function(grunt) {
         cwd: './webkitbuilds/<%= pkg.title %>/linux64/',
         src: ['**/*', '.desktop'],
         dest: '<%= pkg.title %>-linux/'
+      },
+      windows: {
+        options: {
+          archive: './webkitbuilds/<%= pkg.title %>-win64.zip'
+        },
+        expand: true,
+        cwd: './webkitbuilds/<%= pkg.title %>/win64/',
+        src: ['**/*'],
+        dest: '<%= pkg.title %>-win64/'
       },
       chrome: {
         options: {
@@ -280,7 +290,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['nggettext_compile', 'exec:appConfig', 'exec:externalServices', 'browserify', 'sass', 'concat', 'copy:ionic_fonts', 'copy:ionic_js']);
   grunt.registerTask('prod', ['default', 'uglify']);
   grunt.registerTask('translate', ['nggettext_extract']);
-  grunt.registerTask('desktop', ['prod', 'nwjs', 'copy:linux', 'compress:linux']);
+  grunt.registerTask('desktop', ['prod', 'nwjs', 'copy:linux', 'compress:linux', 'compress:windows']);
   grunt.registerTask('osx', ['prod', 'nwjs', 'exec:macos', 'exec:osxsign']);
   grunt.registerTask('osx-debug', ['default', 'nwjs']);
   grunt.registerTask('chrome', ['exec:chrome']);
